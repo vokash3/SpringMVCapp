@@ -13,7 +13,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 /***
- * Аналог applicationContextMVC_bak.xml
+ * Аналог applicationContextMVC.xml
  * https://www.baeldung.com/thymeleaf-in-spring-mvc
  */
 @Configuration

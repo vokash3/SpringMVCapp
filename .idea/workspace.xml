@@ -10,15 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/MyDispatcherServletInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/FirstController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/SecondController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/first/goodbye.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/first/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/second/exit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContextMVC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/depricated/applicationContextMVC_bak.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/depricated/web_bak.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/MyDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/MyDispatcherServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hello_world.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -77,13 +78,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -261,7 +264,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615919385221</updated>
-      <workItem from="1615919388166" duration="5181000" />
+      <workItem from="1615919388166" duration="5557000" />
+      <workItem from="1616442009995" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен контроллер с обработкой GET-запроса с возвращением созданного представления hello_world.html">
       <created>1615922930784</created>
@@ -270,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615922930784</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dependency+ --&gt; Java Servlet API&#10;&#10;Конфигурация приложения реализована через java-классы и аннотации. Xml-конфигурация удалена.">
+      <created>1615926862515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615926862516</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,10 +297,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавлен контроллер с обработкой GET-запроса с возвращением созданного представления hello_world.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен контроллер с обработкой GET-запроса с возвращением созданного представления hello_world.html" />
+    <MESSAGE value="Dependency+ --&gt; Java Servlet API&#10;&#10;Конфигурация приложения реализована через java-классы и аннотации. Xml-конфигурация удалена." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dependency+ --&gt; Java Servlet API&#10;&#10;Конфигурация приложения реализована через java-классы и аннотации. Xml-конфигурация удалена." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

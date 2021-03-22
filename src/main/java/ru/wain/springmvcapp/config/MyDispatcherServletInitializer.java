@@ -3,7 +3,7 @@ package ru.wain.springmvcapp.config;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
- * Аналог web_bak.xml
+ * Аналог web.xml
  *
  * Для работы конфигурации в виде java необходимо установить зависимость с Java Servlet API
  * Она используется наследуемым абстрактным классом
