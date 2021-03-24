@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
 </head>
 <body>
 <p><b>HELLO!</b></p>
+<!--Доступ к данным модели по ключу message-->
+<p th:text="${message}"></p>
 
-<a href="/goodbye">Say goodbye!</a> or <a href="/exit">EXIT</a>
+<a href="/first/goodbye">Say goodbye!</a> or <a href="/exit">EXIT</a>
 </body>
 </html>
