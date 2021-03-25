@@ -32,4 +32,13 @@ public class PersonDAO {
         person.setId(++PERSON_INDEX); //Так как id как бы динамически инкриментируется при добавлении в БД
         people.add(person);
     }
+
+    public void update(int id, Person person) {
+        Person personToUpdate = show(id);
+        personToUpdate.setName(person.getName());
+    }
+
+    public void delete(int id) {
+        people.removeIf(p -> p.getId() == id);
+    }
 }

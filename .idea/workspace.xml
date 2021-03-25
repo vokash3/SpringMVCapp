@@ -9,12 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
+    <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="Аннотация @ModelAttribute, которая позволяет принимать объекты, полученный через POST-методы&#10;&#10;* Добавлен GET метод в PeopleController.java для предоставления формы (new.html) пользователю. В форму передаётся пустой объект класса Person;&#10;* Добавлен POST метод, который принимает данные из формы и заносит принятый модифицированный объект в БД&#10;* Новый метод save в PersonDAO.java для сохранения объекта в БД.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/MyDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/MyDispatcherServletInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -74,6 +76,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.33" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.33" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/people" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="SpringMVCapp:war exploded">
@@ -251,7 +254,7 @@
       <workItem from="1616525012101" duration="799000" />
       <workItem from="1616527588451" duration="1717000" />
       <workItem from="1616608016728" duration="4588000" />
-      <workItem from="1616695452757" duration="1481000" />
+      <workItem from="1616695452757" duration="5795000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен контроллер с обработкой GET-запроса с возвращением созданного представления hello_world.html">
       <created>1615922930784</created>
@@ -288,7 +291,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616612605548</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Аннотация @ModelAttribute, которая позволяет принимать объекты, полученный через POST-методы&#10;&#10;* Добавлен GET метод в PeopleController.java для предоставления формы (new.html) пользователю. В форму передаётся пустой объект класса Person;&#10;* Добавлен POST метод, который принимает данные из формы и заносит принятый модифицированный объект в БД&#10;* Новый метод save в PersonDAO.java для сохранения объекта в БД.">
+      <created>1616697487913</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616697487913</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Альтернативный метод создания пустого объекта в GET методе контроллера PeopleController.java с помощью @ModelAttribute.">
+      <created>1616697818740</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616697818740</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +329,9 @@
     <MESSAGE value="• Удалён класс контроллера HelloController.java и связанного представления hello_world.html.&#10;• Добавлены новые контроллеры и представления" />
     <MESSAGE value="• Работа с @RequestParam для GET запросов в целях приёма параметров/&#10;• Добавлен метод в первом контроллере для работы &quot;калькулятора&quot; (view - calculator.html). В случае ошибки выполнения сценария калькулятора вывод view - error.html&#10;• Работа с Model в FirstController.java для возможности передачи данных в представления" />
     <MESSAGE value="• Добавлена модель Person.java;&#10;• Добавлен контроллер PeopleController.java. Аннотация @PathVariable;&#10;• Добавлены представления, с которыми взаимодействует контроллер: index.html и show.html;&#10;• Создан DAO класс, помечается аннотацией @Component, в нём временно реализован эрей лист вместо БД и методы псевдовзаимодействия с БД: возврат списка людей из базы, возврат человека по айди из БД." />
-    <option name="LAST_COMMIT_MESSAGE" value="• Добавлена модель Person.java;&#10;• Добавлен контроллер PeopleController.java. Аннотация @PathVariable;&#10;• Добавлены представления, с которыми взаимодействует контроллер: index.html и show.html;&#10;• Создан DAO класс, помечается аннотацией @Component, в нём временно реализован эрей лист вместо БД и методы псевдовзаимодействия с БД: возврат списка людей из базы, возврат человека по айди из БД." />
+    <MESSAGE value="Аннотация @ModelAttribute, которая позволяет принимать объекты, полученный через POST-методы&#10;&#10;* Добавлен GET метод в PeopleController.java для предоставления формы (new.html) пользователю. В форму передаётся пустой объект класса Person;&#10;* Добавлен POST метод, который принимает данные из формы и заносит принятый модифицированный объект в БД&#10;* Новый метод save в PersonDAO.java для сохранения объекта в БД." />
+    <MESSAGE value="Альтернативный метод создания пустого объекта в GET методе контроллера PeopleController.java с помощью @ModelAttribute." />
+    <option name="LAST_COMMIT_MESSAGE" value="Альтернативный метод создания пустого объекта в GET методе контроллера PeopleController.java с помощью @ModelAttribute." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

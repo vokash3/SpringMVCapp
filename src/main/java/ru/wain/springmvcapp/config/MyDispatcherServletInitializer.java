@@ -1,6 +1,10 @@
 package ru.wain.springmvcapp.config;
 
+import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 
 /**
  * Аналог web.xml
@@ -22,5 +26,19 @@ public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDisp
     @Override
     protected String[] getServletMappings() {
         return new String[] {"/"};
+    }
+
+    //Запускается при старте спринга
+    //Выполняем приватный метод
+    @Override
+    public void onStartup(ServletContext aServletContext) throws ServletException {
+        super.onStartup(aServletContext);
+        registerHiddenFieldFilter(aServletContext);
+    }
+
+    //Добавляем уже готовый в спринге фильтр, который будет перенаправлять запросы на нужный метод контроллера
+    private void registerHiddenFieldFilter(ServletContext aContext) {
+        aContext.addFilter("hiddenHttpMethodFilter",
+                new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null ,true, "/*");
     }
 }

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit person</title>
+</head>
+<body>
+<!--    Простой аттрибут method="PATCH" недоступен для HTML. Thymeleaf (th:) разрешает так писать и автоматически создаёт скрытое поле _method
+(его можно посмотреть в HTML сформированной страницы). Этот _method уже будет схвачен фильтром спринга
+<input type="hidden" name="_method" value="PATCH">-->
+    <form th:method="PATCH" th:action="@{/people/{id}(id=${person.getId()})}" th:object="${person}">
+        <label for="name"> Name: </label>
+        <input type="text" th:field="*{name}" id="name"/>
+        <br/>
+        <input type="submit" value="Save"/>
+    </form>
+</body>
+</html>
