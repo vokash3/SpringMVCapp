@@ -40,8 +40,8 @@ public class PeopleController {
     6) Перенаправление в create на /people (то есть отрабатывает метод index)
      */
     @GetMapping("/new")
-    public String newPerson(Model model){
-        model.addAttribute("person", new Person()); // Передаём объект в представление, где будет форма для заполнения полей объекта
+    public String newPerson(@ModelAttribute("person") Person person){ //Так как GET запрос не передаёт данных (в данном случае), то @ModelAttribute создаст пустой объект класса Person. Это альтернатива использования Model model
+//        model.addAttribute("person", new Person()); // Передаём объект в представление, где будет форма для заполнения полей объекта
         return "/people/new";
     }
 
