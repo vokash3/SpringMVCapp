@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>New person</title>
+</head>
+<body>
+<!--method - тип запроса, action - на какой адрес форма будет обращаться, куда будет передавать свои данные. Все адреса с собачкой
+object - ключ объекта в который мы вложили модель-->
+<form th:method="POST" th:action="@{/people}" th:object="${person}">
+<!--    field = "*{FIELD}" - поле объекта, которое необходимо заполнить в форме
+        id - метка(кличка) для инпута (как в андроид студио, где у атрибутов есть id, по которому можно обращаться к данному элементу разметки из других)-->
+    <label for="name">Enter name:</label>
+    <input th:type="text" th:field="*{name}" id="name"/>
+    <br/>
+<!--    После create из POST формы будут отправлены значения в @ModelAttribute контроллера-->
+    <input th:type="submit" value="Create">
+</form>
+
+</body>
+</html>

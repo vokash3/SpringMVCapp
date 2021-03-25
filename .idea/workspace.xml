@@ -10,13 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,19 +73,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 9.0.33" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.33" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -265,7 +250,8 @@
       <workItem from="1616442009995" duration="2072000" />
       <workItem from="1616525012101" duration="799000" />
       <workItem from="1616527588451" duration="1717000" />
-      <workItem from="1616608016728" duration="4226000" />
+      <workItem from="1616608016728" duration="4588000" />
+      <workItem from="1616695452757" duration="1481000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен контроллер с обработкой GET-запроса с возвращением созданного представления hello_world.html">
       <created>1615922930784</created>
@@ -295,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616608270822</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="• Добавлена модель Person.java;&#10;• Добавлен контроллер PeopleController.java. Аннотация @PathVariable;&#10;• Добавлены представления, с которыми взаимодействует контроллер: index.html и show.html;&#10;• Создан DAO класс, помечается аннотацией @Component, в нём временно реализован эрей лист вместо БД и методы псевдовзаимодействия с БД: возврат списка людей из базы, возврат человека по айди из БД.">
+      <created>1616612605548</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616612605548</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +311,8 @@
     <MESSAGE value="Dependency+ --&gt; Java Servlet API&#10;&#10;Конфигурация приложения реализована через java-классы и аннотации. Xml-конфигурация удалена." />
     <MESSAGE value="• Удалён класс контроллера HelloController.java и связанного представления hello_world.html.&#10;• Добавлены новые контроллеры и представления" />
     <MESSAGE value="• Работа с @RequestParam для GET запросов в целях приёма параметров/&#10;• Добавлен метод в первом контроллере для работы &quot;калькулятора&quot; (view - calculator.html). В случае ошибки выполнения сценария калькулятора вывод view - error.html&#10;• Работа с Model в FirstController.java для возможности передачи данных в представления" />
-    <option name="LAST_COMMIT_MESSAGE" value="• Работа с @RequestParam для GET запросов в целях приёма параметров/&#10;• Добавлен метод в первом контроллере для работы &quot;калькулятора&quot; (view - calculator.html). В случае ошибки выполнения сценария калькулятора вывод view - error.html&#10;• Работа с Model в FirstController.java для возможности передачи данных в представления" />
+    <MESSAGE value="• Добавлена модель Person.java;&#10;• Добавлен контроллер PeopleController.java. Аннотация @PathVariable;&#10;• Добавлены представления, с которыми взаимодействует контроллер: index.html и show.html;&#10;• Создан DAO класс, помечается аннотацией @Component, в нём временно реализован эрей лист вместо БД и методы псевдовзаимодействия с БД: возврат списка людей из базы, возврат человека по айди из БД." />
+    <option name="LAST_COMMIT_MESSAGE" value="• Добавлена модель Person.java;&#10;• Добавлен контроллер PeopleController.java. Аннотация @PathVariable;&#10;• Добавлены представления, с которыми взаимодействует контроллер: index.html и show.html;&#10;• Создан DAO класс, помечается аннотацией @Component, в нём временно реализован эрей лист вместо БД и методы псевдовзаимодействия с БД: возврат списка людей из базы, возврат человека по айди из БД." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
