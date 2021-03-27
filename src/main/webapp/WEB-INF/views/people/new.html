@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>New person</title>
@@ -12,6 +12,15 @@ object - ключ объекта в который мы вложили моде�
         id - метка(кличка) для инпута (как в андроид студио, где у атрибутов есть id, по которому можно обращаться к данному элементу разметки из других)-->
     <label for="name">Enter name:</label>
     <input th:type="text" th:field="*{name}" id="name"/>
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error!</div>
+    <br/>
+    <label for="age">Age:</label>
+    <input th:type="text" th:field="*{age}" id="age"/>
+    <div style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error!</div>
+    <br/>
+    <label for="email">email:</label>
+    <input th:type="text" th:field="*{email}" id="email"/>
+    <div style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error!</div>
     <br/>
 <!--    После create из POST формы будут отправлены значения в @ModelAttribute контроллера-->
     <input th:type="submit" value="Create">

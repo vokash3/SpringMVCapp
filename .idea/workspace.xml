@@ -9,13 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="Аннотация @ModelAttribute, которая позволяет принимать объекты, полученный через POST-методы&#10;&#10;* Добавлен GET метод в PeopleController.java для предоставления формы (new.html) пользователю. В форму передаётся пустой объект класса Person;&#10;* Добавлен POST метод, который принимает данные из формы и заносит принятый модифицированный объект в БД&#10;* Новый метод save в PersonDAO.java для сохранения объекта в БД.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
+    <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/MyDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/MyDispatcherServletInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,6 +257,11 @@
       <workItem from="1616527588451" duration="1717000" />
       <workItem from="1616608016728" duration="4588000" />
       <workItem from="1616695452757" duration="5795000" />
+      <workItem from="1616701923148" duration="261000" />
+      <workItem from="1616788778330" duration="3290000" />
+      <workItem from="1616830551540" duration="5000" />
+      <workItem from="1616834963810" duration="5000" />
+      <workItem from="1616848952691" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен контроллер с обработкой GET-запроса с возвращением созданного представления hello_world.html">
       <created>1615922930784</created>
@@ -305,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616697818740</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="* Добавлен фильтр в веб конфигурацию для обработки неподдерживаемых HTML методов&#10;&#10;* Добавлена возможность редактирования записей при помощи @PatchMapping и @DeleteMapping в контроллере&#10;&#10;* Созданы соответствующие методы в PersonDAO.java для обновления и удаления&#10;&#10;* Создана соответвующая форма и обновлены старые">
+      <created>1616702172800</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616702172800</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +345,8 @@
     <MESSAGE value="• Добавлена модель Person.java;&#10;• Добавлен контроллер PeopleController.java. Аннотация @PathVariable;&#10;• Добавлены представления, с которыми взаимодействует контроллер: index.html и show.html;&#10;• Создан DAO класс, помечается аннотацией @Component, в нём временно реализован эрей лист вместо БД и методы псевдовзаимодействия с БД: возврат списка людей из базы, возврат человека по айди из БД." />
     <MESSAGE value="Аннотация @ModelAttribute, которая позволяет принимать объекты, полученный через POST-методы&#10;&#10;* Добавлен GET метод в PeopleController.java для предоставления формы (new.html) пользователю. В форму передаётся пустой объект класса Person;&#10;* Добавлен POST метод, который принимает данные из формы и заносит принятый модифицированный объект в БД&#10;* Новый метод save в PersonDAO.java для сохранения объекта в БД." />
     <MESSAGE value="Альтернативный метод создания пустого объекта в GET методе контроллера PeopleController.java с помощью @ModelAttribute." />
-    <option name="LAST_COMMIT_MESSAGE" value="Альтернативный метод создания пустого объекта в GET методе контроллера PeopleController.java с помощью @ModelAttribute." />
+    <MESSAGE value="* Добавлен фильтр в веб конфигурацию для обработки неподдерживаемых HTML методов&#10;&#10;* Добавлена возможность редактирования записей при помощи @PatchMapping и @DeleteMapping в контроллере&#10;&#10;* Созданы соответствующие методы в PersonDAO.java для обновления и удаления&#10;&#10;* Создана соответвующая форма и обновлены старые" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Добавлен фильтр в веб конфигурацию для обработки неподдерживаемых HTML методов&#10;&#10;* Добавлена возможность редактирования записей при помощи @PatchMapping и @DeleteMapping в контроллере&#10;&#10;* Созданы соответствующие методы в PersonDAO.java для обновления и удаления&#10;&#10;* Создана соответвующая форма и обновлены старые" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

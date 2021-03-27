@@ -13,6 +13,12 @@
         <td>
             <p style="text-underline: black"><b>NAME</b></p>
         </td>
+        <td>
+            <p style="text-underline: black"><b>AGE</b></p>
+        </td>
+        <td>
+            <p style="text-underline: black"><b>EMAIL</b></p>
+        </td>
     </tr>
     <tr>
         <td>
@@ -20,6 +26,12 @@
         </td>
         <td>
             <p th:text="${person.getName()}">VALUE</p>
+        </td>
+        <td>
+            <p th:text="${person.getAge()}">VALUE</p>
+        </td>
+        <td>
+            <p th:text="${person.getEmail()}">VALUE</p>
         </td>
     </tr>
 </table>

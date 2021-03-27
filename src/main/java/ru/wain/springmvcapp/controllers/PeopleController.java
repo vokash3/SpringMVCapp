@@ -3,9 +3,12 @@ package ru.wain.springmvcapp.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.wain.springmvcapp.DAO.PersonDAO;
 import ru.wain.springmvcapp.models.Person;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/people")
@@ -46,8 +49,13 @@ public class PeopleController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("person") Person person){ //Чтобы создать объект класса Person и в него положить данные из формы используется @ModelAttribute
+    public String create(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult){ //Чтобы создать объект класса Person и в него положить данные из формы используется @ModelAttribute
         //Этот объект мы положим в БД
+        //@Valid активирует валидаторы полей из класса Person
+        //BindingResult позволяет поймать ошибку во время валидации. Обязательно стоит следующим параметром в сигнатуре метода после валидированного объекта
+        if (bindingResult.hasErrors()){
+            return "people/new"; //В форму с ошибками
+        }
         personDAO.save(person);
 
         return "redirect:/people"; // После добавления объекта браузер будет перенаправлен на /people
@@ -65,7 +73,9 @@ public class PeopleController {
 
     //Для обработки экзотических методов необходимо настроить фильтр Spring
     @PatchMapping("/{id}")
-    public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id){
+    public String update(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult, @PathVariable("id") int id){
+        if(bindingResult.hasErrors())
+            return "people/edit";
         personDAO.update(id, person);
         return "redirect:/people";
     }
