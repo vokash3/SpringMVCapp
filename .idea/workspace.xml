@@ -9,16 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="">
+    <list default="true" id="3d9c7714-ec4f-4d21-a0c4-75925cf0f7b2" name="Default Changelist" comment="Почищен DAO от закомментированного кода">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/DAO/PersonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/controllers/PeopleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,6 +57,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -77,6 +75,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.33" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.33" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/people" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -261,7 +270,9 @@
       <workItem from="1616788778330" duration="3290000" />
       <workItem from="1616830551540" duration="5000" />
       <workItem from="1616834963810" duration="5000" />
-      <workItem from="1616848952691" duration="257000" />
+      <workItem from="1616848952691" duration="891000" />
+      <workItem from="1616860520641" duration="1697000" />
+      <workItem from="1616931860972" duration="7946000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен контроллер с обработкой GET-запроса с возвращением созданного представления hello_world.html">
       <created>1615922930784</created>
@@ -319,7 +330,28 @@
       <option name="project" value="LOCAL" />
       <updated>1616702172800</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="* Добавлена валидация полей персона&#10;* Добавлены новые поля человека&#10;* Соответственно обновлены представления и DAO">
+      <created>1616852606807</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616852606807</updated>
+    </task>
+    <task id="LOCAL-00010" summary="* Добавлена БД PostgreSQL&#10;* Обновлены методы класса PersonDAO.java для взаимодействия с БД&#10;Connection -&gt; Statement (PreparedStatement) -&gt; ResultSet">
+      <created>1616933551298</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616933551298</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Почищен DAO от закомментированного кода">
+      <created>1616933946020</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616933946020</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,24 +378,27 @@
     <MESSAGE value="Аннотация @ModelAttribute, которая позволяет принимать объекты, полученный через POST-методы&#10;&#10;* Добавлен GET метод в PeopleController.java для предоставления формы (new.html) пользователю. В форму передаётся пустой объект класса Person;&#10;* Добавлен POST метод, который принимает данные из формы и заносит принятый модифицированный объект в БД&#10;* Новый метод save в PersonDAO.java для сохранения объекта в БД." />
     <MESSAGE value="Альтернативный метод создания пустого объекта в GET методе контроллера PeopleController.java с помощью @ModelAttribute." />
     <MESSAGE value="* Добавлен фильтр в веб конфигурацию для обработки неподдерживаемых HTML методов&#10;&#10;* Добавлена возможность редактирования записей при помощи @PatchMapping и @DeleteMapping в контроллере&#10;&#10;* Созданы соответствующие методы в PersonDAO.java для обновления и удаления&#10;&#10;* Создана соответвующая форма и обновлены старые" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Добавлен фильтр в веб конфигурацию для обработки неподдерживаемых HTML методов&#10;&#10;* Добавлена возможность редактирования записей при помощи @PatchMapping и @DeleteMapping в контроллере&#10;&#10;* Созданы соответствующие методы в PersonDAO.java для обновления и удаления&#10;&#10;* Создана соответвующая форма и обновлены старые" />
+    <MESSAGE value="* Добавлена валидация полей персона&#10;* Добавлены новые поля человека&#10;* Соответственно обновлены представления и DAO" />
+    <MESSAGE value="* Добавлена БД PostgreSQL&#10;* Обновлены методы класса PersonDAO.java для взаимодействия с БД&#10;Connection -&gt; Statement (PreparedStatement) -&gt; ResultSet" />
+    <MESSAGE value="Почищен DAO от закомментированного кода" />
+    <option name="LAST_COMMIT_MESSAGE" value="Почищен DAO от закомментированного кода" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java</url>
-          <line>38</line>
+          <line>67</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java</url>
-          <line>53</line>
+          <line>82</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/wain/springmvcapp/config/SpringConfig.java</url>
-          <line>68</line>
+          <line>97</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
