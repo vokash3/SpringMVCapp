@@ -54,7 +54,6 @@ public class PersonDAO {
     }
 
     public Person show(int id) {
-//        return people.stream().filter(person -> person.getId() == id).findAny().orElse(null);
         String SQL = "SELECT * FROM Person WHERE id=?";
         Person person = null;
         try {
@@ -78,8 +77,6 @@ public class PersonDAO {
     }
 
     public void save(Person person) {
-//        person.setId(++PERSON_INDEX); //Так как id как бы динамически инкриментируется при добавлении в БД
-//        people.add(person);
         try {
             String SQL = "INSERT INTO Person VALUES (1, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -95,10 +92,6 @@ public class PersonDAO {
     }
 
     public void update(int id, Person person) {
-//        Person personToUpdate = show(id);
-//        personToUpdate.setName(person.getName());
-//        personToUpdate.setAge(person.getAge());
-//        personToUpdate.setEmail(person.getEmail());
         String SQL = "UPDATE Person SET name=?, age=?, email=? WHERE id=?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -115,7 +108,6 @@ public class PersonDAO {
     }
 
     public void delete(int id) {
-//        people.removeIf(p -> p.getId() == id);
         String SQL = "DELETE FROM Person WHERE id=?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
